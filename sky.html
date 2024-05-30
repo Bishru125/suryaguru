@@ -4,13 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+    <title>Skyguru</title>
+    <link rel="stylesheet" href="./css/libs/bootstrap.min.css">
     <style>
         body {
-            height: 200vh;
-            /* Make the page scrollable */
+            height: 120vh;
         }
 
         #cloud,
@@ -20,18 +18,54 @@
         }
 
         #cloud {
-            top: 50%;
-            left: 5%;
+            top: 26%;
+            left: -27%;
         }
 
         #bird {
-            top: 40%;
-            left: 5%;
+            top: 21%;
+            left: -12%;
+
+        }
+
+        .spiral-ring {
+            background-image: url('./images/animation-images/spiral-ring.png');
+            background-size: cover;
+            background-position: center;
+            width: 40vw;
+            height: 100vh;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
         }
 
         body {
             background-color: rgb(196, 196, 196);
         }
+
+
+        .window-wrap {
+            padding-top: 400px;
+        }
+
+        .window-1 {
+            position: relative;
+        }
+
+        .view-1,
+        .view-2,
+        .view-3 {
+            position: absolute;
+            width: 100px;
+            height: 145px;
+            object-fit: cover;
+            border-radius: 40px;
+            top: 160px;
+            left: 80px;
+            z-index: -1;
+        }
+        
     </style>
 
 </head>
@@ -42,12 +76,36 @@
         <div class="container">
             <img src="./images/animation-images/Cloud.png" alt="" id="cloud">
             <img src="./images/animation-images/birds.png" alt="" id="bird">
+            <div class="d-flex justify-content-center window-wrap">
+                <div class="spiral-ring"></div>
+                <div class="window-1">
+                    <img src="./images/animation-images/window.png" alt="">
+                    <img src="./images/animation-images/view-1.png" alt="" class="view-1">
+                </div>
+                <div class="window-1">
+                    <img src="./images/animation-images/window.png" alt="">
+                    <img src="./images/animation-images/view-2.png" alt="" class="view-2">
+                </div>
+                <div class="window-1">
+                    <img src="./images/animation-images/window.png" alt="">
+                    <img src="./images/animation-images/view-3.png" alt="" class="view-3">
+                </div>
+            </div>
+
+
         </div>
     </section>
 
-    <script src="./js/animation.js"></script>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+    <script src="./js/animation.js"></script>
+    <script src="./js/libs/bootstrap.bundle.min.js"></script>
+    <!-- <script src="./js/libs/gsap.min.js"></script>
+    <script src="./js/libs/trigger.min.js"></script> -->
+
+
 
 </body>
 
